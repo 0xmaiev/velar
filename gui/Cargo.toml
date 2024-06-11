@@ -1,0 +1,48 @@
+[package]
+name = "velar-gui"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[features]
+default = ["localnet"]
+mainnet = []
+devnet = []
+localnet = []
+
+[dependencies]
+anyhow = { workspace = true }
+futures = { workspace = true }
+
+log = { workspace = true }
+lyon_algorithms = { workspace = true }
+
+once_cell = { workspace = true }
+
+# GUI Framework
+iced = { version = "0.12", features = [
+    "canvas",
+    "tokio",
+    "image",
+    "advanced",
+    "lazy",
+    "qr_code",
+    "multi-window",
+] }
+iced_core = "0.12"
+iced_futures = "0.12"
+iced_graphics = "0.12"
+iced_renderer = "0.12"
+iced_style = "0.12"
+iced_wgpu = "0.12"
+iced_winit = "0.12"
+iced_widget = "0.12"
+
+# Solana
+solana-client = { workspace = true }
+solana-sdk = { workspace = true }
+
+thiserror = { workspace = true }
+tokio = { workspace = true }
+
+#utils = { workspace = true }

@@ -1,0 +1,17 @@
+[toolchain]
+channel = "1.75"
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+realm = "BQ2dxnsVFhfehHGS3sBy7hLrpwCJDLDsxbvzDSPY7U7x"
+character = "BQ2dxnsVFhfehHGS3sBy7hLrpwCJDLDsxbvzDSPY7U7x"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"

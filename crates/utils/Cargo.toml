@@ -1,0 +1,21 @@
+[package]
+name = "utils"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[features]
+default = ["localnet"]
+localnet = []
+devnet = []
+mainnet = []
+
+[dependencies]
+anchor-lang = { workspace = true }
+futures = { workspace = true }
+realm = { workspace = true, features = ["no-entrypoint", "client"] }
+solana-account-decoder = { workspace = true }
+solana-client = { workspace = true }
+solana-sdk = { workspace = true }
+tokio = { workspace = true }
+tokio-stream = { workspace = true }

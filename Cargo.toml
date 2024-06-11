@@ -1,0 +1,39 @@
+[workspace]
+members = ["programs/*", "crates/*", "gui"]
+resolver = "2"
+
+[workspace.dependencies]
+anchor-lang = "0.30"
+anyhow = "1.0"
+
+futures = "0.3.5"
+
+log = "0.4.17"
+lyon_algorithms = "1.0.4"
+
+mpl-core = { version = "0.7.0", features = ["anchor"] }
+
+once_cell = "1.19.0"
+
+realm = { path = "programs/realm" }
+
+solana-account-decoder = "~1.17"
+solana-client = "~1.17"
+solana-program = "~1.17"
+solana-sdk = "~1.17"
+
+thiserror = "1.0.31"
+tokio = { version = "1.14.1", features = ["full"] }
+tokio-stream = { version = "0.1.11", features = ["sync"] }
+
+utils = { path = "crates/utils" }
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1
